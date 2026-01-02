@@ -1,7 +1,3 @@
-To complete your project, here is a professional **README.md** file tailored for your GitHub repository. It highlights the features of your SaaS landing page, the tech stack, and includes your live demo link.
-
----
-
 ## **README.md Content**
 
 ```markdown
