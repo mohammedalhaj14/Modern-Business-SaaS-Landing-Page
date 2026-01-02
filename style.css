@@ -40,7 +40,38 @@ body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; }
     padding: 12px 24px; border-radius: 50px; display: flex; align-items: center; gap: 10px;
     text-decoration: none; font-weight: 700; z-index: 1000; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+.hero-image {
+    flex: 1.2;
+    perspective: 1000px; /* Essential for the 3D depth effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hero-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    
+    /* The "Pro" look: Subtle tilt and deep shadow */
+    transform: rotateY(-10deg) rotateX(5deg);
+    box-shadow: 
+        -20px 20px 50px rgba(0, 0, 0, 0.2), 
+        0px 10px 20px rgba(37, 99, 235, 0.1);
+        
+    /* Glass border effect */
+    border: 8px solid rgba(255, 255, 255, 0.8);
+    
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+/* Hover animation to make it interactive */
+.hero-image img:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+    box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.25);
+}
 /* --- Sections --- */
 .page-section { padding: 100px 0; }
 .bg-light { background: var(--bg-light); }
